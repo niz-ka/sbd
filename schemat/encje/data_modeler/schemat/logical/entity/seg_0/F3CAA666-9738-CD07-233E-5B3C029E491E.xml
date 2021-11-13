@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F3CAA666-9738-CD07-233E-5B3C029E491E" name="Rachunek">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 18:38:48 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>50F5D9DC-251F-BB88-D4CC-4B30F2583858</importedID>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="numer" id="965460C6-3F57-272A-2E04-2F156E84205F">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 18:38:48 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>935C03B2-02B2-F0E7-6704-C71052AFEB86</importedID>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa" id="E3DD1584-03CD-92A8-41B3-61E28CFBFDF3">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 18:38:48 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>B9DC8B90-AA75-32D0-DE24-4E2ACE45F3CD</importedID>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="saldo" id="95CD8C5F-2240-5280-CBF1-3B4DB83ADADB">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 18:38:48 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>9A9850FC-F36E-9DFC-5AE0-886460A465E8</importedID>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="oprocentowanie" id="739F4F35-3AC3-FB69-A740-F5B05DFBEA51">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 18:38:48 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>CC33E64B-5EAF-EE7E-91E3-B3311623A686</importedID>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data otwarcia" id="F7F4C429-3783-5BEE-EDEA-D8FE1FD67EDB">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 18:38:48 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>85C4D301-F604-1D79-61FF-43A7718E1955</importedID>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="E9509E6B-EBB9-5B46-7B66-A75363007AC3">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 18:38:48 UTC</createdTime>
+<generatorID>11AB4E32-5759-E8AC-82C7-1BE59441C7BF</generatorID>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>3CA43F99-548D-9DE7-046E-19E984CF7E61</importedID>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<referedAttribute>62B28665-2EF6-C9DF-75F2-EE9A8C2F7F11</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="AB5EF3EC-1449-74B5-6F39-E2009001852F">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 18:50:47 UTC</createdTime>
+<generatorID>B496D9DB-26F0-4EA4-3A2C-54A1528D0136</generatorID>
+<ownerDesignName>schemat</ownerDesignName>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<referedAttribute>FBC3D3D6-D684-05A8-FC40-A7A902537A2E</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="C81F93DC-6A19-82EB-7B82-339BBD2987FC">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 18:51:22 UTC</createdTime>
+<generatorID>D45C38B5-E148-4212-4D0D-59289152280B</generatorID>
+<ownerDesignName>schemat</ownerDesignName>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>FBC3D3D6-D684-05A8-FC40-A7A902537A2E</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4509B3D3-6F46-BFD9-1375-CFE80161796D" name="Rachunek PK">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 18:38:48 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>C1B62CC5-A146-F2FA-6535-3667A29C21FA</importedID>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>965460C6-3F57-272A-2E04-2F156E84205F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

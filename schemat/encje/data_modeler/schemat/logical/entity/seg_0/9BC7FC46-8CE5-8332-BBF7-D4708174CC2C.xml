@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9BC7FC46-8CE5-8332-BBF7-D4708174CC2C" name="Wniosek">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 19:15:35 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="FA55F001-43B5-19E4-0670-319A5D58E5C0">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 19:15:44 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data złożenia" id="5794BDB5-6F50-3B55-ABE4-B62EC7B88E17">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 19:15:51 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status" id="37BAD9BE-B2F4-5B80-42D9-3E80B7784619">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 19:20:23 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="komentarz" id="A5468105-E833-BC76-D6D4-0DFA3DBE89F1">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 19:16:01 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="B9F5D016-8A25-FA08-F61D-90866EF4F6AF">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 19:17:24 UTC</createdTime>
+<generatorID>3E02B26A-A6EA-E257-FF8A-F37F6E2BCCED</generatorID>
+<ownerDesignName>schemat</ownerDesignName>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<referedAttribute>FBC3D3D6-D684-05A8-FC40-A7A902537A2E</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="8272737F-FA0A-19F4-435C-78FAD51D68F5">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 19:18:28 UTC</createdTime>
+<generatorID>1F90A189-D7FD-8C8A-B2DF-B9399B3000D5</generatorID>
+<ownerDesignName>schemat</ownerDesignName>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<referedAttribute>BEDE37A2-9243-674A-B13E-52C38DB05157</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BF8A08FB-705B-E672-48AB-3520925CDBE7" name="Wniosek PK">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-13 19:15:48 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<engineerTo>
+<item key="13548358-333D-1AF8-3D15-60E0A1AB2AED" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FA55F001-43B5-19E4-0670-319A5D58E5C0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

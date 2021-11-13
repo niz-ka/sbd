@@ -1,0 +1,92 @@
+CREATE TABLE Rodzaje_przelewu (
+	id PRIMARY KEY,
+	nazwa NOT NULL,
+	opis
+);
+
+CREATE TABLE Rodzaje_rachunku (
+	id PRIMARY KEY,
+	nazwa NOT NULL,
+	opis,
+	skrot NOT NULL
+);
+
+CREATE TABLE Rodzaje_kredytu (
+	id PRIMARY KEY,
+	nazwa NOT NULL,
+	opis
+);
+
+CREATE TABLE Klienci (
+	id PRIMARY KEY,
+	imie NOT NULL,
+	nazwisko NOT NULL,
+	numer_telefonu,
+	adres_e-mail,
+	id_adresu NOT NULL REFERENCES Adresy(id)
+	
+	NIP,
+	REGON,
+	nazwa_firmy,
+	
+	PESEL
+	
+	typ_klienta NOT NULL CHECK IN ('I', 'B')
+);
+
+CREATE TABLE Przelewy (
+	id PRIMARY KEY,
+	rachunek_odbiorcy NOT NULL,
+	data_operacji NOT NULL,
+	kwota NOT NULL,
+	tytul NOT NULL,
+	dane_odbiorcy
+	id_rodzaju_przelewu NOT NULL REFERENCES Rodzaje_przelewu(id)
+	numer_rachunku NOT NULL REFERENCES Rachunki(numer)
+);
+
+CREATE TABLE Kredyty (
+	id PRIMARY KEY,
+	cel,
+	kwota NOT NULL,
+	okres_splaty NOT NULL,
+	data_zawarcia NOT NULL,
+	oprocentowanie NOT NULL,
+	id_rodzaju_kredytu NOT NULL REFERENCES Rodzaje_kredytu(id),
+	numer_rachunku NOT NULL REFERENCES Rachunki(numer),
+);
+
+CREATE TABLE Rachunki (
+	numer PRIMARY KEY,
+	nazwa,
+	saldo NOT NULL,
+	oprocentowanie NOT NULL,
+	data_otwarcia NOT NULL
+	id_rodzaju_rachunku NOT NULL REFERENCES Rodzaje_rachunku(id),
+	id_wlascicela NOT NULL REFERENCES Klienci(id),
+	id_wspolwlascicela REFERENCES Klienci(id)
+);
+
+CREATE TABLE Adresy (
+	id PRIMARY KEY,
+	ulica NOT NULL,
+	numer NOT NULL,
+	lokal,
+	kod_pocztowy NOT NULL
+);
+
+CREATE TABLE Wnioski (
+	id PRIMARY KEY,
+	data_zlozenia NOT NULL,
+	status NOT NULL,
+	komentarz,
+	id_klienta NOT NULL REFERENCES Klienci(id),
+	id_rodzaju_wniosku NOT NULL REFERENCES Rodzaje_wniosku(id)
+);
+
+CREATE TABLE Rodzaje_wniosku (
+	id PRIMARY KEY,
+	nazwa NOT NULL,
+	opis
+);
+ 
