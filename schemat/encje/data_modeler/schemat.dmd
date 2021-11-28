@@ -1,10 +1,10 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="schemat" id="34E01DC6-C1D8-82B7-026D-443BA8C5B3A0" version="3.5">
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="schemat" id="581D63DF-854E-1B1E-8540-D83E9B2D2119" version="3.5">
 <createdBy>Kamil</createdBy>
-<createdTime>2021-11-13 18:38:30 UTC</createdTime>
+<createdTime>2021-11-28 12:27:39 UTC</createdTime>
 <ownerDesignName>schemat</ownerDesignName>
 <capitalNames>false</capitalNames>
-<designId>34E01DC6-C1D8-82B7-026D-443BA8C5B3A0</designId>
+<designId>581D63DF-854E-1B1E-8540-D83E9B2D2119</designId>
 <usedDesignStorageDescriptors>
 <designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="82CB1065-BB91-698A-748D-06CB4D2D5187">
 <designStoragePath>C:\Users\Kamil\Desktop\baza\schemat</designStoragePath>
@@ -14,6 +14,9 @@
 </designDescr>
 <designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="FA256C9F-5613-9794-B759-8CA839024765">
 <designStoragePath>C:\Users\Kamil\Desktop\baza\schemat</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="34E01DC6-C1D8-82B7-026D-443BA8C5B3A0">
+<designStoragePath>C:\Users\Kamil\Desktop\data_modeler\schemat</designStoragePath>
 </designDescr>
 </usedDesignStorageDescriptors>
 </OSDM_Design>

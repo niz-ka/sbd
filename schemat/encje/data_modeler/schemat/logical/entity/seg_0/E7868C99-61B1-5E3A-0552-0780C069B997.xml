@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E7868C99-61B1-5E3A-0552-0780C069B997" name="Wniosek">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-28 12:28:06 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>9BC7FC46-8CE5-8332-BBF7-D4708174CC2C</importedID>
+<engineerTo>
+<item key="CC111861-C7C0-B642-6391-E872630CCFB0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="D89EA8FB-C3F3-478B-4E1C-674BB7EC5B94">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-28 12:28:06 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>FA55F001-43B5-19E4-0670-319A5D58E5C0</importedID>
+<engineerTo>
+<item key="CC111861-C7C0-B642-6391-E872630CCFB0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data złożenia" id="A2E5DA6C-0D55-1621-D21C-20D00F4B2824">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-28 12:28:06 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>5794BDB5-6F50-3B55-ABE4-B62EC7B88E17</importedID>
+<engineerTo>
+<item key="CC111861-C7C0-B642-6391-E872630CCFB0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="komentarz" id="EABE80E5-7471-CCF7-F2D1-5A969F74F6DD">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-28 12:28:06 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>A5468105-E833-BC76-D6D4-0DFA3DBE89F1</importedID>
+<engineerTo>
+<item key="CC111861-C7C0-B642-6391-E872630CCFB0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="77B4E570-C770-0D58-6BE3-2B4487C89BA1">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-28 12:28:06 UTC</createdTime>
+<generatorID>3BF23198-C11F-15BF-394A-3B835C8103E7</generatorID>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>B9F5D016-8A25-FA08-F61D-90866EF4F6AF</importedID>
+<engineerTo>
+<item key="CC111861-C7C0-B642-6391-E872630CCFB0" value="true"/>
+</engineerTo>
+<referedAttribute>5B2832B2-F863-709D-F256-C403F82A8002</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="160189D5-D5E1-DE9A-AA08-68CD04451A06">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-28 12:28:06 UTC</createdTime>
+<generatorID>0831FFDE-EAA6-FF36-DD5C-50225AE63B70</generatorID>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>8272737F-FA0A-19F4-435C-78FAD51D68F5</importedID>
+<engineerTo>
+<item key="CC111861-C7C0-B642-6391-E872630CCFB0" value="true"/>
+</engineerTo>
+<referedAttribute>472C0DA0-7C67-89CB-92C2-A3EB3E89D3C3</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id3" id="E3A6736D-B1F4-14AD-2BEA-188E6905FC04">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-28 12:46:30 UTC</createdTime>
+<generatorID>66173FFA-3715-B723-0A6C-4BF8D16778A8</generatorID>
+<ownerDesignName>schemat</ownerDesignName>
+<engineerTo>
+<item key="CC111861-C7C0-B642-6391-E872630CCFB0" value="true"/>
+</engineerTo>
+<referedAttribute>18215225-CBA6-D342-615F-F39621A3377D</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C2F6B48F-837E-14C2-8520-E52A0F43F9C2" name="Wniosek PK">
+<createdBy>Kamil</createdBy>
+<createdTime>2021-11-28 12:28:06 UTC</createdTime>
+<ownerDesignName>schemat</ownerDesignName>
+<importedID>BF8A08FB-705B-E672-48AB-3520925CDBE7</importedID>
+<engineerTo>
+<item key="CC111861-C7C0-B642-6391-E872630CCFB0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D89EA8FB-C3F3-478B-4E1C-674BB7EC5B94</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

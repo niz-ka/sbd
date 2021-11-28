@@ -11,25 +11,18 @@ CREATE TABLE Rodzaje_rachunku (
 	skrot NOT NULL
 );
 
-CREATE TABLE Rodzaje_kredytu (
-	id PRIMARY KEY,
-	nazwa NOT NULL,
-	opis
-);
-
 CREATE TABLE Klienci (
 	id PRIMARY KEY,
-	imie NOT NULL,
-	nazwisko NOT NULL,
+	imie_nazwisko NOT NULL,
 	numer_telefonu,
-	adres_e-mail,
-	id_adresu NOT NULL REFERENCES Adresy(id)
+	adres_email,
+	id_adresu NOT NULL REFERENCES Adresy(id),
 	
 	NIP,
 	REGON,
 	nazwa_firmy,
 	
-	PESEL
+	PESEL,
 	
 	typ_klienta NOT NULL CHECK IN ('I', 'B')
 );
@@ -40,9 +33,9 @@ CREATE TABLE Przelewy (
 	data_operacji NOT NULL,
 	kwota NOT NULL,
 	tytul NOT NULL,
-	dane_odbiorcy
-	id_rodzaju_przelewu NOT NULL REFERENCES Rodzaje_przelewu(id)
-	numer_rachunku NOT NULL REFERENCES Rachunki(numer)
+	dane_odbiorcy,
+	id_rodzaju_przelewu NOT NULL REFERENCES Rodzaje_przelewu(id),
+	id_rachunku NOT NULL REFERENCES Rachunki(id)
 );
 
 CREATE TABLE Kredyty (
@@ -52,16 +45,16 @@ CREATE TABLE Kredyty (
 	okres_splaty NOT NULL,
 	data_zawarcia NOT NULL,
 	oprocentowanie NOT NULL,
-	id_rodzaju_kredytu NOT NULL REFERENCES Rodzaje_kredytu(id),
-	numer_rachunku NOT NULL REFERENCES Rachunki(numer),
+	id_rachunku NOT NULL REFERENCES Rachunki(id)
 );
 
 CREATE TABLE Rachunki (
-	numer PRIMARY KEY,
+	id PRIMARY KEY,
+	numer NOT NULL,
 	nazwa,
 	saldo NOT NULL,
 	oprocentowanie NOT NULL,
-	data_otwarcia NOT NULL
+	data_otwarcia NOT NULL,
 	id_rodzaju_rachunku NOT NULL REFERENCES Rodzaje_rachunku(id),
 	id_wlascicela NOT NULL REFERENCES Klienci(id),
 	id_wspolwlascicela REFERENCES Klienci(id)
@@ -72,16 +65,17 @@ CREATE TABLE Adresy (
 	ulica NOT NULL,
 	numer NOT NULL,
 	lokal,
+	miejscowosc NOT NULL,
 	kod_pocztowy NOT NULL
 );
 
 CREATE TABLE Wnioski (
 	id PRIMARY KEY,
 	data_zlozenia NOT NULL,
-	status NOT NULL,
 	komentarz,
 	id_klienta NOT NULL REFERENCES Klienci(id),
-	id_rodzaju_wniosku NOT NULL REFERENCES Rodzaje_wniosku(id)
+	id_rodzaju_wniosku NOT NULL REFERENCES Rodzaje_wniosku(id),
+	id_statusu_wniosku NOT NULL REFERENCES Statusy_wniosku(id)
 );
 
 CREATE TABLE Rodzaje_wniosku (
@@ -89,4 +83,8 @@ CREATE TABLE Rodzaje_wniosku (
 	nazwa NOT NULL,
 	opis
 );
- 
+
+CREATE TABLE Statusy_wniosku (
+	id PRIMARY KEY,
+	nazwa NOT NULL
+);
