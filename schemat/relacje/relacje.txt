@@ -1,66 +1,67 @@
-CREATE TABLE Rodzaje_przelewu (
+Rodzaj_przelewu (
 	id PRIMARY KEY,
 	nazwa NOT NULL,
 	opis
 );
 
-CREATE TABLE Rodzaje_rachunku (
+Rodzaj_rachunku (
 	id PRIMARY KEY,
 	nazwa NOT NULL,
 	opis,
 	skrot NOT NULL
 );
 
-CREATE TABLE Klienci (
+Klient (
 	id PRIMARY KEY,
 	imie_nazwisko NOT NULL,
 	numer_telefonu,
 	adres_email,
-	id_adresu NOT NULL REFERENCES Adresy(id),
-	
+	id_adresu NOT NULL REFERENCES Adres(id),
+
 	NIP,
 	REGON,
 	nazwa_firmy,
-	
+
 	PESEL,
-	
+
 	typ_klienta NOT NULL CHECK IN ('I', 'B')
 );
 
-CREATE TABLE Przelewy (
+Przelew (
 	id PRIMARY KEY,
 	rachunek_odbiorcy NOT NULL,
+	rachunek_nadawcy NOT NULL REFERENCES Rachunek(id)
 	data_operacji NOT NULL,
 	kwota NOT NULL,
 	tytul NOT NULL,
 	dane_odbiorcy,
-	id_rodzaju_przelewu NOT NULL REFERENCES Rodzaje_przelewu(id),
-	id_rachunku NOT NULL REFERENCES Rachunki(id)
+	id_rodzaju_przelewu NOT NULL REFERENCES Rodzaj_przelewu(id),
+	id_rachunku NOT NULL REFERENCES Rachunek(id)
 );
 
-CREATE TABLE Kredyty (
+Kredyt (
 	id PRIMARY KEY,
 	cel,
 	kwota NOT NULL,
 	okres_splaty NOT NULL,
 	data_zawarcia NOT NULL,
 	oprocentowanie NOT NULL,
-	id_rachunku NOT NULL REFERENCES Rachunki(id)
+	id_rachunku NOT NULL REFERENCES Rachunek(id)
 );
 
-CREATE TABLE Rachunki (
+CREATE TABLE Rachunek (
 	id PRIMARY KEY,
 	numer NOT NULL,
 	nazwa,
 	saldo NOT NULL,
 	oprocentowanie NOT NULL,
 	data_otwarcia NOT NULL,
-	id_rodzaju_rachunku NOT NULL REFERENCES Rodzaje_rachunku(id),
-	id_wlascicela NOT NULL REFERENCES Klienci(id),
-	id_wspolwlascicela REFERENCES Klienci(id)
+	id_rodzaju_rachunku NOT NULL REFERENCES Rodzaj_rachunku(id),
+	id_wlascicela NOT NULL REFERENCES Klient(id),
+	id_wspolwlascicela REFERENCES Klient(id)
 );
 
-CREATE TABLE Adresy (
+CREATE TABLE Adres (
 	id PRIMARY KEY,
 	ulica NOT NULL,
 	numer NOT NULL,
@@ -69,22 +70,22 @@ CREATE TABLE Adresy (
 	kod_pocztowy NOT NULL
 );
 
-CREATE TABLE Wnioski (
+CREATE TABLE Wniosek (
 	id PRIMARY KEY,
 	data_zlozenia NOT NULL,
 	komentarz,
-	id_klienta NOT NULL REFERENCES Klienci(id),
-	id_rodzaju_wniosku NOT NULL REFERENCES Rodzaje_wniosku(id),
-	id_statusu_wniosku NOT NULL REFERENCES Statusy_wniosku(id)
+	id_klienta NOT NULL REFERENCES Klient(id),
+	id_rodzaju_wniosku NOT NULL REFERENCES Rodzaj_wniosku(id),
+	id_statusu_wniosku NOT NULL REFERENCES Status_wniosku(id)
 );
 
-CREATE TABLE Rodzaje_wniosku (
+Rodzaj_wniosku (
 	id PRIMARY KEY,
 	nazwa NOT NULL,
 	opis
 );
 
-CREATE TABLE Statusy_wniosku (
+Status_wniosku (
 	id PRIMARY KEY,
 	nazwa NOT NULL
 );
