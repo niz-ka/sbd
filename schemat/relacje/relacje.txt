@@ -29,7 +29,7 @@ Klient (
 
 Przelew (
 	id PRIMARY KEY,
-	rachunek_odbiorcy NOT NULL,
+	numer_rachunku_odbiorcy NOT NULL,
 	rachunek_nadawcy NOT NULL REFERENCES Rachunek(id)
 	data_operacji NOT NULL,
 	kwota NOT NULL,
