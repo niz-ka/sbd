@@ -1,0 +1,91 @@
+TransferType (
+	id PRIMARY KEY,
+	name NOT NULL,
+	description
+);
+
+AccountType (
+	id PRIMARY KEY,
+	name NOT NULL,
+	description,
+	symbol NOT NULL
+);
+
+
+RequestType (
+	id PRIMARY KEY,
+	name NOT NULL,
+	description
+);
+
+RequestStatus (
+	id PRIMARY KEY,
+	name NOT NULL
+);
+
+Customer (
+	id PRIMARY KEY,
+	full_name NOT NULL,
+	phone,
+	email,
+	address NOT NULL REFERENCES Address(id),
+
+	NIP,
+	REGON,
+	company_name,
+
+	PESEL,
+
+	customer_kind NOT NULL CHECK IN ('I', 'B')
+);
+
+Transfer (
+	id PRIMARY KEY,
+	receiver_account NOT NULL,
+	transfer_date NOT NULL,
+	amount NOT NULL,
+	title NOT NULL,
+	receiver_data,
+	type NOT NULL REFERENCES TransferType(id),
+	sender NOT NULL REFERENCES Account(id)
+);
+
+Loan (
+	id PRIMARY KEY,
+	purpose,
+	amount NOT NULL,
+	repayment_period NOT NULL,
+	start_date NOT NULL,
+	interest_rate NOT NULL,
+	borrower NOT NULL REFERENCES Account(id)
+);
+
+Account (
+	id PRIMARY KEY,
+	number NOT NULL,
+	name,
+	balance NOT NULL,
+	interest_rate NOT NULL,
+	opening_date NOT NULL,
+	type NOT NULL REFERENCES AccountType(id),
+	owner NOT NULL REFERENCES Customer(id),
+	coowner REFERENCES Customer(id)
+);
+
+Address (
+	id PRIMARY KEY,
+	street NOT NULL,
+	number NOT NULL,
+	apartment,
+	city NOT NULL,
+	postal_code NOT NULL
+);
+
+Request (
+	id PRIMARY KEY,
+	submission_date NOT NULL,
+	comment,
+	applicant NOT NULL REFERENCES Customer(id),
+	type NOT NULL REFERENCES RequestType(id),
+	status NOT NULL REFERENCES RequestStatus(id)
+);
