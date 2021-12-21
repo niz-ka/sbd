@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
 </head>
-<body style="font-family: 'Lato', sans-serif;">
+<body style="font-family: 'Lato', sans-serif;" class="bg-gray-100">
     <div class="flex gap-2">
         {{-- Sidebar --}}
         <div class="bg-gray-800 text-gray-100 tracking-wider" style="width: 13rem; min-width: 13rem; min-height: 100vh;">
@@ -24,25 +24,25 @@
                 <h2 class="pl-2 font-bold text-xl tracking-widest">E-Bank</h2>
             </div>
             <ul class="flex flex-col px-4 py-4">
-                <x-nav-link page="/" icon="fas fa-users w-7">Klienci</x-nav-link>
-                <x-nav-link page="#" icon="fas fa-wallet w-7">Rachunki</x-nav-link>
-                <x-nav-link page="#" icon="fas fa-copy w-7">Wnioski</x-nav-link>
-                <x-nav-link page="#" icon="fas fa-coins w-7">Kredyty</x-nav-link>
-                <x-nav-link page="#" icon="fas fa-exchange-alt w-7">Przelewy</x-nav-link>
+{{--                <x-nav-link page="/" icon="fas fa-users w-7">Klienci</x-nav-link>--}}
+{{--                <x-nav-link page="#" icon="fas fa-wallet w-7">Rachunki</x-nav-link>--}}
+{{--                <x-nav-link page="#" icon="fas fa-copy w-7">Wnioski</x-nav-link>--}}
+{{--                <x-nav-link page="#" icon="fas fa-coins w-7">Kredyty</x-nav-link>--}}
+{{--                <x-nav-link page="#" icon="fas fa-exchange-alt w-7">Przelewy</x-nav-link>--}}
                 {{-- Dropdown --}}
                 <li class="p-2 rounded-lg">
                     <a class="w-full h-full block cursor-pointer select-none" id="dropdown-button"><i class="fas fa-caret-down w-7"></i>Pozostałe</a>
-                    <ol class="text-sm flex flex-col p-2 mt-4 bg-gray-700 rounded-lg" style="display: none;" id="dropdown-menu">
-                        <x-dropdown-link page="#">Rodzaje wniosku</x-dropdown-link>
-                        <x-dropdown-link page="#">Statusy wniosku</x-dropdown-link>
-                        <x-dropdown-link page="#">Rodzaje rachunku</x-dropdown-link>
-                        <x-dropdown-link page="#">Rodzaje przelewu</x-dropdown-link>
+                    <ol class="text-sm flex flex-col p-2 mt-4 bg-gray-700 rounded-lg" style="{{ !request()->routeIs('others.*') ? "display:none;" : "" }}" id="dropdown-menu">
+                        <x-dropdown-link page="others.request-types.index">Rodzaje wniosku</x-dropdown-link>
+{{--                        <x-dropdown-link page="#">Statusy wniosku</x-dropdown-link>--}}
+{{--                        <x-dropdown-link page="#">Rodzaje rachunku</x-dropdown-link>--}}
+{{--                        <x-dropdown-link page="#">Rodzaje przelewu</x-dropdown-link>--}}
                     </ol>
                 </li>
             </ul>
         </div>
         {{-- Content --}}
-        <div class="p-8">{{ $slot }}</div>
+        <div class="p-14 w-full">{{ $slot }}</div>
     </div>
 
 {{-- Simple dropdown script --}}
