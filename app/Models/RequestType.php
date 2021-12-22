@@ -10,4 +10,5 @@ class RequestType extends Model
     use HasFactory;
     protected $table = "RequestType";
     public $timestamps = false;
+    protected $fillable = ["name", "description"];
 }

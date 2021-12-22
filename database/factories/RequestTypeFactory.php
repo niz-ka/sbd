@@ -15,7 +15,7 @@ class RequestTypeFactory extends Factory
     {
         return [
             "name" => $this->faker->word(),
-            "description" => $this->faker->text(100)
+            "description" => $this->faker->optional(0.4)->text(250)
         ];
     }
 }

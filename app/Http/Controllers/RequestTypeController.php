@@ -15,29 +15,41 @@ class RequestTypeController extends Controller
     public function index()
     {
         return view("others.request-types.index", [
-            "request_types" => RequestType::all()
+            "request_types" => RequestType::paginate(8)
         ]);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\View
      */
     public function create()
     {
-        //
+        return view("others.request-types.create");
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "name" => "required|max:250",
+            "description" => "max:500"
+        ]);
+
+        RequestType::create([
+            "name" => $request->name,
+            "description" => $request->description
+        ]);
+
+        return redirect(route("others.request-types.index"))->with(
+            "status",
+            "Pomyślnie dodano wpis"
+        );
     }
 
     /**

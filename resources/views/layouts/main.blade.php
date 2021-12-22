@@ -33,7 +33,7 @@
                 <li class="p-2 rounded-lg">
                     <a class="w-full h-full block cursor-pointer select-none" id="dropdown-button"><i class="fas fa-caret-down w-7"></i>Pozostałe</a>
                     <ol class="text-sm flex flex-col p-2 mt-4 bg-gray-700 rounded-lg" style="{{ !request()->routeIs('others.*') ? "display:none;" : "" }}" id="dropdown-menu">
-                        <x-dropdown-link page="others.request-types.index">Rodzaje wniosku</x-dropdown-link>
+                        <x-dropdown-link page="others.request-types.index" group="others.request-types.*">Rodzaje wniosku</x-dropdown-link>
 {{--                        <x-dropdown-link page="#">Statusy wniosku</x-dropdown-link>--}}
 {{--                        <x-dropdown-link page="#">Rodzaje rachunku</x-dropdown-link>--}}
 {{--                        <x-dropdown-link page="#">Rodzaje przelewu</x-dropdown-link>--}}
