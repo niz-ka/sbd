@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::name("others.")->group(function () {
-    Route::resource("request-types", RequestTypeController::class);
+    Route::resource("request-types", RequestTypeController::class)->except("show");
 });
 
 

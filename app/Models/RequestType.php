@@ -11,4 +11,11 @@ class RequestType extends Model
     protected $table = "RequestType";
     public $timestamps = false;
     protected $fillable = ["name", "description"];
+
+    public function scopeSearch($query, $search)
+    {
+        return $query
+            ->where("name", "LIKE", "%{$search}%")
+            ->orWhere("description", "LIKE", "%{$search}%");
+    }
 }

@@ -1,31 +1,30 @@
+@php $this_page = "others.request-types" @endphp
 <x-main-layout>
-    <x-create-button page="others.request-types.create" />
-    @if(session("status"))
-        {{ session("status") }}
-    @endif
+    <div class="flex justify-between items-center">
+        <x-search :page="$this_page" />
+        <x-create-button :page="$this_page" />
+    </div>
+    <x-status-message />
     <x-tab header="Rodzaje wniosku">
-            <table class="w-full border">
-                <tr class="text-left border">
-                    <th class="border p-2">ID</th>
-                    <th class="border p-2">Nazwa</th>
-                    <th class="border p-2">Opis</th>
-                    <th class="border p-2">Akcja</th>
+            <table class="custom-table">
+                <tr>
+                    <th>ID</th>
+                    <th>Nazwa</th>
+                    <th>Opis</th>
+                    <th>Akcja</th>
                 </tr>
                 @foreach ($request_types as $request_type)
-                    <tr class="border">
-                        <td class="border p-2">{{ $request_type->id }}</td>
-                        <td class="border p-2">{{ $request_type->name }}</td>
-                        <td class="border p-2">{{ $request_type->description }}</td>
+                    <tr>
+                        <td>{{ $request_type->id }}</td>
+                        <td>{{ $request_type->name }}</td>
+                        <td class="w-full">{{ $request_type->description }}</td>
                         <td>
-                            <div class="flex">
-                                <x-action-button page="others.request-types.edit" :resource="$request_type" classes="bg-blue-600 hover:bg-blue-800">Edytuj</x-action-button>
-                                <x-action-button page="others.request-types.destroy" :resource="$request_type"  classes="bg-red-600 hover:bg-red-800">Usuń</x-action-button>
-                            </div>
+                            <x-action-buttons :page="$this_page" :resource="$request_type" />
                         </td>
                     </tr>
                 @endforeach
             </table>
-        <div class="mt-6">
+        <div>
            {{ $request_types->links() }}
         </div>
     </x-tab>

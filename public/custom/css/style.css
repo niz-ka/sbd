@@ -1,0 +1,22 @@
+.custom-table, .custom-table tr, .custom-table th, .custom-table td {
+    border: 1px solid rgb(229, 231, 235);
+}
+
+.custom-table th, .custom-table td {
+    padding: 0.3rem;
+}
+
+.custom-table {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.custom-table tr {
+    text-align: left;
+}
+
+.form-tab {
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+}

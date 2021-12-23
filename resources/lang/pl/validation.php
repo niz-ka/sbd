@@ -128,8 +128,8 @@ return [
     'url'                  => 'Format pola :attribute jest nieprawidłowy.',
     'uuid'                 => 'Pole :attribute musi być poprawnym identyfikatorem UUID.',
     'custom'               => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name' => [
+            'unique' => 'Taka nazwa już występuje.',
         ],
     ],
     "attributes" => [
