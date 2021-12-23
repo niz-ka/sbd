@@ -15,8 +15,7 @@
             @foreach ($request_statuses as $request_status)
                 <tr>
                     <td>{{ $request_status->id }}</td>
-                    <td>{{ $request_status->name }}</td>
-                    <td class="w-full">{{ $request_status->description }}</td>
+                    <td class="w-full">{{ $request_status->name }}</td>
                     <td>
                         <x-action-buttons :page="$this_page" :resource="$request_status" />
                     </td>
