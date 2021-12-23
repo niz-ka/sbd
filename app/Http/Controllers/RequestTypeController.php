@@ -8,11 +8,6 @@ use Illuminate\Validation\Rule;
 
 class RequestTypeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Contracts\View\View
-     */
     public function index(Request $request)
     {
         $search_phrase = $request->search;
@@ -24,21 +19,11 @@ class RequestTypeController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Contracts\View\View
-     */
     public function create()
     {
         return view("others.request-types.create");
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -57,11 +42,6 @@ class RequestTypeController extends Controller
         );
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     */
     public function edit(RequestType $request_type)
     {
         return view("others.request-types.edit", [
@@ -69,12 +49,7 @@ class RequestTypeController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     */
+
     public function update(Request $request, RequestType $request_type)
     {
         $request->validate([
@@ -93,11 +68,7 @@ class RequestTypeController extends Controller
         );
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  RequestType  $id
-     */
+
     public function destroy(RequestType $request_type)
     {
         $request_type->delete();

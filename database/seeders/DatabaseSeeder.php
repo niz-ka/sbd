@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\RequestStatus;
 use App\Models\RequestType;
 use Database\Factories\RequestTypeFactory;
 use Illuminate\Database\Seeder;
@@ -16,5 +17,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         RequestType::factory()->count(5)->create();
+        RequestStatus::factory()->count(5)->create();
     }
 }

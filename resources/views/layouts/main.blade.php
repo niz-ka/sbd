@@ -5,7 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ config("app.name")  }}</title>
+    <title>System bankowy</title>
+    <link rel="shortcut icon" type="image/png" href="{{ asset("bank-building.png") }}"/>
     {{--  Tailwind CSS  --}}
     <link href="{{ asset('custom/css/tailwind.css') }}" rel="stylesheet">
     {{--  Font Awesome  --}}
@@ -36,7 +37,7 @@
                     <a class="w-full h-full block cursor-pointer select-none" id="dropdown-button"><i class="fas fa-caret-down w-7"></i>Pozostałe</a>
                     <ol class="text-sm flex flex-col p-2 mt-4 bg-gray-700 rounded-lg" style="{{ !request()->routeIs('others.*') ? "display:none;" : "" }}" id="dropdown-menu">
                         <x-dropdown-link page="others.request-types.index" group="others.request-types.*">Rodzaje wniosku</x-dropdown-link>
-                        <x-dropdown-link page="others.request-types.index" group="others.request-types.*">Statusy wniosku</x-dropdown-link>
+                        <x-dropdown-link page="others.request-statuses.index" group="others.request-statuses.*">Statusy wniosku</x-dropdown-link>
                         <x-dropdown-link page="others.request-types.index" group="others.request-types.*">Rodzaje rachunku</x-dropdown-link>
                         <x-dropdown-link page="others.request-types.index" group="others.request-types.*">Rodzaje przelewu</x-dropdown-link>
                     </ol>
