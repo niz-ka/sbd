@@ -134,6 +134,7 @@ return [
     ],
     "attributes" => [
         "name" => "nazwa",
-        "description" => "opis"
+        "description" => "opis",
+        "symbol" => "skrót"
     ]
 ];

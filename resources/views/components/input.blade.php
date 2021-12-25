@@ -1,4 +1,4 @@
-<div class="flex flex-col w-full mb-5">
+<div class="flex flex-col w-full mb-5 {{ $classes ?? '' }}">
     <label class="block text-gray-700 font-bold mb-2" for="{{ $name }}">
         {{ $description }}
     </label>

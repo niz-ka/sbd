@@ -38,7 +38,7 @@
                     <ol class="text-sm flex flex-col p-2 mt-4 bg-gray-700 rounded-lg" style="{{ !request()->routeIs('others.*') ? "display:none;" : "" }}" id="dropdown-menu">
                         <x-dropdown-link page="others.request-types.index" group="others.request-types.*">Rodzaje wniosku</x-dropdown-link>
                         <x-dropdown-link page="others.request-statuses.index" group="others.request-statuses.*">Statusy wniosku</x-dropdown-link>
-                        <x-dropdown-link page="others.request-types.index" group="others.request-types.*">Rodzaje rachunku</x-dropdown-link>
+                        <x-dropdown-link page="others.account-types.index" group="others.account-types.*">Rodzaje rachunku</x-dropdown-link>
                         <x-dropdown-link page="others.transfer-types.index" group="others.transfer-types.*">Rodzaje przelewu</x-dropdown-link>
                     </ol>
                 </li>

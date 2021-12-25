@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\AccountType;
 use App\Models\RequestStatus;
 use App\Models\RequestType;
 use App\Models\TransferType;
@@ -22,5 +23,6 @@ class DatabaseSeeder extends Seeder
         RequestType::factory()->count($count)->create();
         RequestStatus::factory()->count($count)->create();
         TransferType::factory()->count($count)->create();
+        AccountType::factory()->count($count)->create();
     }
 }
