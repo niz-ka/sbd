@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\RequestStatusController;
 use App\Http\Controllers\RequestTypeController;
+use App\Http\Controllers\TransferTypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,12 +18,13 @@ use Illuminate\Support\Facades\Route;
 
 // Development only
 Route::get('/', function () {
-    return redirect()->route("others.request-statuses.index");
+    return redirect()->route("others.transfer-types.index");
 });
 
 Route::name("others.")->group(function () {
     Route::resource("request-types", RequestTypeController::class)->except("show");
     Route::resource("request-statuses", RequestStatusController::class)->except("show");
+    Route::resource("transfer-types", TransferTypeController::class)->except("show");
 });
 
 

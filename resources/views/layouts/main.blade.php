@@ -39,7 +39,7 @@
                         <x-dropdown-link page="others.request-types.index" group="others.request-types.*">Rodzaje wniosku</x-dropdown-link>
                         <x-dropdown-link page="others.request-statuses.index" group="others.request-statuses.*">Statusy wniosku</x-dropdown-link>
                         <x-dropdown-link page="others.request-types.index" group="others.request-types.*">Rodzaje rachunku</x-dropdown-link>
-                        <x-dropdown-link page="others.request-types.index" group="others.request-types.*">Rodzaje przelewu</x-dropdown-link>
+                        <x-dropdown-link page="others.transfer-types.index" group="others.transfer-types.*">Rodzaje przelewu</x-dropdown-link>
                     </ol>
                 </li>
             </ul>
