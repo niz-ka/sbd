@@ -3,9 +3,11 @@
 namespace Database\Seeders;
 
 use App\Models\AccountType;
+use App\Models\Address;
 use App\Models\RequestStatus;
 use App\Models\RequestType;
 use App\Models\TransferType;
+use Database\Factories\AddressFactory;
 use Database\Factories\RequestTypeFactory;
 use Illuminate\Database\Seeder;
 
@@ -24,5 +26,6 @@ class DatabaseSeeder extends Seeder
         RequestStatus::factory()->count($count)->create();
         TransferType::factory()->count($count)->create();
         AccountType::factory()->count($count)->create();
+        Address::factory()->count($count)->create();
     }
 }

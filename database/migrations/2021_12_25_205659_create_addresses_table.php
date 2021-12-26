@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAccountTypesTable extends Migration
+class CreateAddressesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateAccountTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('AccountType', function (Blueprint $table) {
+        Schema::create('Address', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->string("symbol");
-            $table->text("description")->nullable();
+            $table->string("street");
+            $table->string("number");
+            $table->string("apartment")->nullable();
+            $table->string("city");
+            $table->string("postal_code");
         });
     }
 
@@ -28,6 +30,6 @@ class CreateAccountTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('AccountType');
+        Schema::dropIfExists('Address');
     }
 }
