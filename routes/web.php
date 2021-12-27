@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccountTypeController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RequestStatusController;
 use App\Http\Controllers\RequestTypeController;
 use App\Http\Controllers\TransferTypeController;
@@ -29,4 +30,4 @@ Route::name("others.")->group(function () {
     Route::resource("account-types", AccountTypeController::class)->except("show");
 });
 
-
+Route::resource("customers", CustomerController::class);

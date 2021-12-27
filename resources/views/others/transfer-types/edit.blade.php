@@ -1,5 +1,6 @@
 @php $this_page = "others.transfer-types" @endphp
 <x-main-layout>
+    <x-back-button />
     <x-tab header="Edytuj rodzaj przelewu" classes="form-tab">
         <x-edit-form :page="$this_page" :resource="$transfer_type">
             <x-input name="name" description="Nazwa" type="text" value="{{ $transfer_type->name }}" />

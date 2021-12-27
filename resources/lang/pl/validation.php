@@ -135,6 +135,19 @@ return [
     "attributes" => [
         "name" => "nazwa",
         "description" => "opis",
-        "symbol" => "skrót"
+        "symbol" => "skrót",
+        "full_name" => "imię i nazwisko",
+        "street" => "ulica",
+        "number" => "numer",
+        "postal_code" => "kod pocztowy",
+        "city" => "miejscowość",
+        "phone" => "telefon",
+        "email" => "e-mail",
+        "apartment" => "lokal",
+        "customer_kind" => "typ klienta",
+        "PESEL" => "PESEL",
+        "NIP" => "NIP",
+        "REGON" => "REGON",
+        "company_name" => "nazwa firmy"
     ]
 ];

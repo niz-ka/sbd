@@ -1,5 +1,6 @@
 @php $this_page = "others.account-types" @endphp
 <x-main-layout>
+    <x-back-button />
     <x-tab header="Nowy rodzaj rachunku" classes="form-tab">
         <x-create-form :page="$this_page">
             <div class="grid grid-cols-4 gap-10">
