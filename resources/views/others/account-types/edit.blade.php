@@ -1,5 +1,6 @@
 @php $this_page = "others.account-types" @endphp
 <x-main-layout>
+    <x-back-button />
     <x-tab header="Edytuj rodzaj rachunku" classes="form-tab">
         <x-edit-form :page="$this_page" :resource="$account_type">
             <div class="grid grid-cols-4 gap-10">

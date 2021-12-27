@@ -1,4 +1,9 @@
-<div class="flex">
+<div class="flex justify-end">
+    @if(($show ?? false) === true)
+        <a href="{{ route($page . ".show", $resource) }}" class="text-white p-2 rounded-xl m-1 block bg-gray-600 hover:bg-gray-800">
+            Pokaż
+        </a>
+    @endif
     <a href="{{ route($page . ".edit", $resource) }}" class="text-white p-2 rounded-xl m-1 block bg-blue-600 hover:bg-blue-800">
         Edytuj
     </a>
