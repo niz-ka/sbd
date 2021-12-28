@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\RequestStatus;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 
 class RequestStatusController extends Controller
