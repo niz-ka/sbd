@@ -152,6 +152,10 @@ return [
         "customer" => "ID klienta",
         "request_type" => "rodzaj wniosku",
         "request_status" => "status wniosku",
-        "comment" => "komentarz"
+        "comment" => "komentarz",
+        "interest_rate" => "oprocentowanie",
+        "account_type" => "rodzaj rachunku",
+        "co_owner" => "ID współwłaściciela",
+        "balance" => "saldo"
     ]
 ];
