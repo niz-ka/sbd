@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
     {{--    Custom styles --}}
     <link href="{{ asset('custom/css/style.css') }}" rel="stylesheet">
+    {{ $styles ?? '' }}
 </head>
 <body style="font-family: 'Lato', sans-serif;" class="bg-gray-100">
     <div class="flex gap-2">
@@ -29,7 +30,7 @@
             <ul class="flex flex-col px-4 py-4">
                 <x-nav-link page="customers.index" icon="fas fa-users w-7">Klienci</x-nav-link>
                 <x-nav-link page="others.request-types.index" icon="fas fa-wallet w-7">Rachunki</x-nav-link>
-                <x-nav-link page="others.request-types.index" icon="fas fa-copy w-7">Wnioski</x-nav-link>
+                <x-nav-link page="customer-requests.index" icon="fas fa-copy w-7">Wnioski</x-nav-link>
                 <x-nav-link page="others.request-types.index" icon="fas fa-coins w-7">Kredyty</x-nav-link>
                 <x-nav-link page="others.request-types.index" icon="fas fa-exchange-alt w-7">Przelewy</x-nav-link>
                 {{-- Dropdown --}}

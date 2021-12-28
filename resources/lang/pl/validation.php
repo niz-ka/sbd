@@ -148,6 +148,10 @@ return [
         "PESEL" => "PESEL",
         "NIP" => "NIP",
         "REGON" => "REGON",
-        "company_name" => "nazwa firmy"
+        "company_name" => "nazwa firmy",
+        "customer" => "ID klienta",
+        "request_type" => "rodzaj wniosku",
+        "request_status" => "status wniosku",
+        "comment" => "komentarz"
     ]
 ];
