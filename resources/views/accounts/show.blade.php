@@ -6,6 +6,7 @@
             <div><b>Nazwa:</b> {{ $account->name ?? '-' }}</div>
             <div><b>Saldo:</b> {{ sprintf("%0.2f PLN", round($account->balance, 2)) }}</div>
             <div><b>Oprocentowanie:</b> {{ sprintf("%0.2f%%", round($account->interest_rate, 2)) }}</div>
+            <div><b>Data otwarcia:</b> {{ $account->opening_date }}</div>
             <b>Rodzaj rachunku</b>
             <ul class="pl-5">
                 <li><b>Nazwa:</b> {{ $account->account_type->name }} ({{ $account->account_type->symbol }})</li>
