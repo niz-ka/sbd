@@ -29,7 +29,7 @@
             </div>
             <ul class="flex flex-col px-4 py-4">
                 <x-nav-link page="customers.index" icon="fas fa-users w-7">Klienci</x-nav-link>
-                <x-nav-link page="others.request-types.index" icon="fas fa-wallet w-7">Rachunki</x-nav-link>
+                <x-nav-link page="accounts.index" icon="fas fa-wallet w-7">Rachunki</x-nav-link>
                 <x-nav-link page="customer-requests.index" icon="fas fa-copy w-7">Wnioski</x-nav-link>
                 <x-nav-link page="others.request-types.index" icon="fas fa-coins w-7">Kredyty</x-nav-link>
                 <x-nav-link page="others.request-types.index" icon="fas fa-exchange-alt w-7">Przelewy</x-nav-link>
