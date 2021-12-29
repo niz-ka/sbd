@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AccountTypeController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CustomerRequestController;
+use App\Http\Controllers\LoanController;
 use App\Http\Controllers\RequestStatusController;
 use App\Http\Controllers\RequestTypeController;
 use App\Http\Controllers\TransferTypeController;
@@ -36,3 +37,4 @@ Route::name("others.")->group(function () {
 Route::resource("customers", CustomerController::class);
 Route::resource("customer-requests", CustomerRequestController::class);
 Route::resource("accounts", AccountController::class);
+Route::resource("loans", LoanController::class);

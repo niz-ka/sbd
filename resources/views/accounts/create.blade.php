@@ -12,7 +12,7 @@
 
             <x-select label="Rodzaj rachunku" name="account_type">
                 @foreach($account_types as $account_type)
-                    <option value="{{ $account_type->id }}" {{ old("$account_type") == $account_type->id ? 'selected' : '' }}> {{ $account_type->name }}</option>
+                    <option value="{{ $account_type->id }}" {{ old("account_type") == $account_type->id ? 'selected' : '' }}> {{ $account_type->name }}</option>
                 @endforeach
             </x-select>
 
