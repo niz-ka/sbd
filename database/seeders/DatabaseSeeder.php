@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Account;
 use App\Models\CustomerRequest;
+use App\Models\Loan;
 use App\Models\TransferType;
 use Illuminate\Database\Seeder;
 
@@ -20,6 +20,6 @@ class DatabaseSeeder extends Seeder
 
         TransferType::factory()->count($count)->create();
         CustomerRequest::factory()->count($count)->create();
-        Account::factory()->count($count)->create();
+        Loan::factory()->count($count)->create();
     }
 }

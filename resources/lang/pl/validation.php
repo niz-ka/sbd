@@ -131,6 +131,9 @@ return [
         'name' => [
             'unique' => 'Taka nazwa już występuje.',
         ],
+        'end_date' => [
+            'after' => 'Data spłaty musi być późniejsza niż data zawarcia kredytu.'
+        ]
     ],
     "attributes" => [
         "name" => "nazwa",
@@ -156,6 +159,10 @@ return [
         "interest_rate" => "oprocentowanie",
         "account_type" => "rodzaj rachunku",
         "co_owner" => "ID współwłaściciela",
-        "balance" => "saldo"
+        "balance" => "saldo",
+        "account" => "numer rachunku",
+        "amount" => "kwota",
+        "end_date" => "data spłaty",
+        "purpose" => "cel"
     ]
 ];
