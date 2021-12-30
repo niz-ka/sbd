@@ -7,8 +7,8 @@ use App\Http\Controllers\CustomerRequestController;
 use App\Http\Controllers\LoanController;
 use App\Http\Controllers\RequestStatusController;
 use App\Http\Controllers\RequestTypeController;
+use App\Http\Controllers\TransferController;
 use App\Http\Controllers\TransferTypeController;
-use App\Models\CustomerRequest;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,3 +38,4 @@ Route::resource("customers", CustomerController::class);
 Route::resource("customer-requests", CustomerRequestController::class);
 Route::resource("accounts", AccountController::class);
 Route::resource("loans", LoanController::class);
+Route::resource("transfers", TransferController::class);

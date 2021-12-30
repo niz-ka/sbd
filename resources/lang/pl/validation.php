@@ -163,6 +163,10 @@ return [
         "account" => "numer rachunku",
         "amount" => "kwota",
         "end_date" => "data spłaty",
-        "purpose" => "cel"
+        "purpose" => "cel",
+        "receiver_number" => "rachunek odbiorcy",
+        "title" => "tytuł przelewu",
+        "receiver_data" => "dane odbiorcy",
+        "transfer_type" => "rodzaj przelewu"
     ]
 ];
