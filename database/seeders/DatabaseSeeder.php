@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\CustomerRequest;
 use App\Models\Loan;
+use App\Models\Transfer;
 use App\Models\TransferType;
 use Illuminate\Database\Seeder;
 
@@ -18,8 +19,8 @@ class DatabaseSeeder extends Seeder
     {
         $count = 10;
 
-        TransferType::factory()->count($count)->create();
         CustomerRequest::factory()->count($count)->create();
         Loan::factory()->count($count)->create();
+        Transfer::factory()->count($count)->create();
     }
 }

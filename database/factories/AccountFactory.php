@@ -16,7 +16,7 @@ class AccountFactory extends Factory
     public function definition()
     {
         return [
-            "number" => $this->faker->bankAccountNumber('', '', null),
+            "number" => $this->faker->bankAccountNumber('161', 'PL', null),
             "name" => $this->faker->optional(0.7)->text(50),
             "balance" => $this->faker->randomFloat(null, 0, 100000),
             "interest_rate" => $this->faker->randomFloat(null, 0, 10),

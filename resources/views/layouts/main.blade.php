@@ -32,7 +32,7 @@
                 <x-nav-link page="accounts.index" icon="fas fa-wallet w-7">Rachunki</x-nav-link>
                 <x-nav-link page="customer-requests.index" icon="fas fa-copy w-7">Wnioski</x-nav-link>
                 <x-nav-link page="loans.index" icon="fas fa-coins w-7">Kredyty</x-nav-link>
-                <x-nav-link page="others.request-types.index" icon="fas fa-exchange-alt w-7">Przelewy</x-nav-link>
+                <x-nav-link page="transfers.index" icon="fas fa-exchange-alt w-7">Przelewy</x-nav-link>
                 {{-- Dropdown --}}
                 <li class="p-2 rounded-lg">
                     <a class="w-full h-full block cursor-pointer select-none" id="dropdown-button"><i class="fas fa-caret-down w-7"></i>Pozostałe</a>
