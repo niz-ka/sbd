@@ -15,8 +15,7 @@ class AccountType extends Model
     public function scopeSearch($query, $search)
     {
         return $query
-            ->where("name", "LIKE", "%{$search}%")
-            ->orWhere("description", "LIKE", "%{$search}%")
-            ->orWhere("symbol", "LIKE", "%{$search}%");
+            ->where("name", "LIKE", "{$search}%")
+            ->orWhere("symbol", "=", "{$search}");
     }
 }

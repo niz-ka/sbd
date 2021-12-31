@@ -15,7 +15,8 @@ class CustomerRequest extends Model
     public function scopeSearch($query, $search)
     {
         return $query
-            ->where("id", "LIKE", "%{$search}%");
+            ->where("request_date", "=", "{$search}")
+            ->orWhere("customer_id", "=", "{$search}");
     }
 
     public function customer()

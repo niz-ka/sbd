@@ -1,7 +1,7 @@
 @php $this_page = "customers" @endphp
 <x-main-layout>
     <div class="flex justify-between items-center">
-        <x-search :page="$this_page" />
+        <x-search :page="$this_page" placeholder="Imię i nazwisko" />
         <x-create-button :page="$this_page" />
     </div>
     <x-status-message />
@@ -9,6 +9,7 @@
     <x-tab header="Klienci">
         <table class="custom-table">
             <tr>
+                <th>Lp.</th>
                 <th>ID</th>
                 <th>Imię i nazwisko</th>
                 <th>Typ klienta</th>
@@ -16,6 +17,7 @@
             </tr>
             @foreach ($customers as $customer)
                 <tr>
+                    <td>{{ $customers->firstItem() + $loop->index  }}</td>
                     <td>{{ $customer->id }}</td>
                     <td>{{ $customer->full_name }}</td>
                     <td>{{ $customer->customer_kind }}</td>

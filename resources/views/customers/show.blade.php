@@ -8,7 +8,7 @@
             <div><b>Adres e-mail:</b> {{ $customer->email ?? '-' }}</div>
             <div>
                 <b>Adres:</b> <br />
-                {{ $customer->address->street }} {{ $customer->address->number }} <br />
+                {{ $customer->address->street }} {{ $customer->address->number }}{{ $customer->address->apartment ? '/' . $customer->address->apartment : '' }} <br />
                 {{ $customer->address->postal_code }} {{ $customer->address->city }}
             </div>
             <div><b>Typ klienta:</b> {{ $customer->customer_kind }}</div>

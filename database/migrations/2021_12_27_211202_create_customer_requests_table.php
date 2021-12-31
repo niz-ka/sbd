@@ -18,7 +18,7 @@ class CreateCustomerRequestsTable extends Migration
     {
         Schema::create('CustomerRequest', function (Blueprint $table) {
             $table->id();
-            $table->date("request_date");
+            $table->date("request_date")->index();
             $table->text("comment")->nullable();
             $table->foreignIdFor(Customer::class)->constrained("Customer")->cascadeOnDelete();
             $table->foreignIdFor(RequestType::class)->constrained("RequestType")->cascadeOnDelete();

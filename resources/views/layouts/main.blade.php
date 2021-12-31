@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>System bankowy</title>
     <link rel="shortcut icon" type="image/png" href="{{ asset("bank-building.png") }}"/>
     {{--  Tailwind CSS  --}}
@@ -28,11 +29,11 @@
                 <h2 class="pl-2 font-bold text-xl tracking-widest">E-Bank</h2>
             </div>
             <ul class="flex flex-col px-4 py-4">
-                <x-nav-link page="customers.index" icon="fas fa-users w-7">Klienci</x-nav-link>
-                <x-nav-link page="accounts.index" icon="fas fa-wallet w-7">Rachunki</x-nav-link>
-                <x-nav-link page="customer-requests.index" icon="fas fa-copy w-7">Wnioski</x-nav-link>
-                <x-nav-link page="loans.index" icon="fas fa-coins w-7">Kredyty</x-nav-link>
-                <x-nav-link page="transfers.index" icon="fas fa-exchange-alt w-7">Przelewy</x-nav-link>
+                <x-nav-link page="customers.index" icon="fas fa-users w-7" group="customers.*">Klienci</x-nav-link>
+                <x-nav-link page="accounts.index" icon="fas fa-wallet w-7" group="accounts.*">Rachunki</x-nav-link>
+                <x-nav-link page="customer-requests.index" icon="fas fa-copy w-7" group="customer-requests.*">Wnioski</x-nav-link>
+                <x-nav-link page="loans.index" icon="fas fa-coins w-7" group="loans.*">Kredyty</x-nav-link>
+                <x-nav-link page="transfers.index" icon="fas fa-exchange-alt w-7" group="transfers.*">Przelewy</x-nav-link>
                 {{-- Dropdown --}}
                 <li class="p-2 rounded-lg">
                     <a class="w-full h-full block cursor-pointer select-none" id="dropdown-button"><i class="fas fa-caret-down w-7"></i>Pozostałe</a>

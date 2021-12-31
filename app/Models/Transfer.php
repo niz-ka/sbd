@@ -15,7 +15,11 @@ class Transfer extends Model
     public function scopeSearch($query, $search)
     {
         return $query
-            ->where("name", "LIKE", "%{$search}%");
+            ->where("receiver_number", "=", "{$search}")
+            ->orWhere("transfer_date", "=", "{$search}")
+            ->orWhere(function($query) use ($search){
+                $query->whereRelation("account", "number", "=", "{$search}");
+            });
     }
 
     public function account()

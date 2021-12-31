@@ -1,21 +1,21 @@
 @php $this_page = "others.request-types" @endphp
 <x-main-layout>
     <div class="flex justify-between items-center">
-        <x-search :page="$this_page" />
+        <x-search :page="$this_page" placeholder="Nazwa" />
         <x-create-button :page="$this_page" />
     </div>
     <x-status-message />
     <x-tab header="Rodzaje wniosku">
             <table class="custom-table">
                 <tr>
-                    <th>ID</th>
+                    <th>Lp.</th>
                     <th>Nazwa</th>
                     <th>Opis</th>
                     <th>Akcja</th>
                 </tr>
                 @foreach ($request_types as $request_type)
                     <tr>
-                        <td>{{ $request_type->id }}</td>
+                        <td>{{ $request_types->firstItem() + $loop->index  }}</td>
                         <td>{{ $request_type->name }}</td>
                         <td class="w-full">{{ $request_type->description }}</td>
                         <td>
