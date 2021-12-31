@@ -1,14 +1,14 @@
 @php $this_page = "customer-requests" @endphp
 <x-main-layout>
     <div class="flex justify-between items-center">
-        <x-search :page="$this_page" />
+        <x-search :page="$this_page" placeholder="Data, ID klienta" />
         <x-create-button :page="$this_page" />
     </div>
     <x-status-message />
     <x-tab header="Wnioski">
         <table class="custom-table">
             <tr>
-                <th>ID</th>
+                <th>Lp.</th>
                 <th>ID klienta</th>
                 <th>Rodzaj wniosku</th>
                 <th>Status wniosku</th>
@@ -17,7 +17,7 @@
             </tr>
             @foreach ($customer_requests as $customer_request)
                 <tr>
-                    <td>{{ $customer_request->id }}</td>
+                    <td>{{ $customer_requests->firstItem() + $loop->index  }}</td>
                     <td>{{ $customer_request->customer_id }}</td>
                     <td>{{ $customer_request->request_type->name }}</td>
                     <td>{{ $customer_request->request_status->name }}</td>

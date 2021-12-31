@@ -15,7 +15,8 @@ class Account extends Model
     public function scopeSearch($query, $search)
     {
         return $query
-            ->where("name", "LIKE", "%{$search}%");
+            ->where("number", "=", "{$search}")
+            ->orWhere("opening_date", "=", "{$search}");
     }
 
     public function customer()

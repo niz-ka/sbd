@@ -1,0 +1,23 @@
+## Indeksy
+Poza indeksami założonymi automatycznie na kluczach podstawowych, indeksy zostaną utworzone na następujących kolumnach:
+- PESEL (Klienci)
+- NIP (Klienci)
+- REGON (Klienci)
+- Imię i nazwisko (Klienci)
+- Rachunek odbiorcy (Przelewy)
+- Numer rachunku bankowego (Rachunki)
+- Data (każda relacja zawierająca kolumnę typu data)
+
+## Generowanie kluczy podstawowych typu liczbowego
+Klucze będą generowane automatycznie z użyciem opcji AUTO_INCREMENT.
+
+## Procedura
+Po każdej operacji INSERT bądź UPDATE na tabeli Klienci wykonywana będzie walidacja danych z użyciem procedury wyzwalanej. 
+Walidacja taka byłaby niemożliwa do wykonania poprzez użycie CHECK. 
+Działanie procedury:
+	Jeżeli kolumna typ_klienta wskazuje na klienta indywidualnego -> sprawdź czy wartości NIP, REGON, nazwa_firmy są null. Jeśli nie, rzuć wyjątek.
+	Jeżeli kolumna typ_klienta wskazuje na klienta biznesowego -> sprawdź czy wartość PESEL jest null. Jeśli nie, rzuć wyjątek.
+
+## Funkcja
+Funkcja pozwala na wygenerowanie (SELECT) raportu sumy (SUM) wykonanych przelewów danego dnia (argument funkcji podawany przez użytkownika) z podziałem na rodzaj przelewu (GROUP BY).
+  

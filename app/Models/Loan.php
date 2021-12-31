@@ -15,7 +15,11 @@ class Loan extends Model
     public function scopeSearch($query, $search)
     {
         return $query
-            ->where("id", "LIKE", "%{$search}%");
+            ->where("amount", "=", "{$search}")
+            ->orWhere("end_date", "=", "{$search}")
+            ->orWhere(function($query) use ($search){
+                $query->whereRelation("account", "number", "=", "{$search}");
+            });
     }
 
     public function account()

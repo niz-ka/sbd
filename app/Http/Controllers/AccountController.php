@@ -7,6 +7,7 @@ use App\Models\AccountType;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
 class AccountController extends Controller
@@ -83,11 +84,8 @@ class AccountController extends Controller
             "balance" => "required|numeric|min:0",
             "interest_rate" => "required|numeric|between:0,100",
             "account_type" => "required|exists:AccountType,id",
-            "co_owner" => ["nullable", "exists:Customer,id", function ($attribute, $value, $fail) use ($account) {
-                if ($value === strval($account->customer_id)) {
-                    $fail('Pole ID współwłaściciela musi być różne od ID właściciela');
-                }
-            },]
+            "customer" => "required|exists:Customer,id",
+            "co_owner" => ["nullable", "exists:Customer,id", "different:customer"]
         ]);
 
         Account::where("id", $account->id)->update([
@@ -96,7 +94,8 @@ class AccountController extends Controller
             "interest_rate" => $request->interest_rate,
             "balance" => $request->balance,
             "account_type_id" => $request->account_type,
-            "co_owner_id" => $request->co_owner
+            "co_owner_id" => $request->co_owner,
+            "customer_id" => $request->customer
         ]);
 
 
@@ -114,5 +113,10 @@ class AccountController extends Controller
             "status",
             "Pomyślnie usunięto rachunek"
         );
+    }
+
+    public function report() {
+        $result = DB::select('SELECT account_report();');
+        return response()->json($result);
     }
 }

@@ -15,7 +15,6 @@ class RequestType extends Model
     public function scopeSearch($query, $search)
     {
         return $query
-            ->where("name", "LIKE", "%{$search}%")
-            ->orWhere("description", "LIKE", "%{$search}%");
+            ->where("name", "LIKE", "{$search}%");
     }
 }

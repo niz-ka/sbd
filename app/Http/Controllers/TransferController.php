@@ -7,6 +7,7 @@ use App\Models\Transfer;
 use App\Models\TransferType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class TransferController extends Controller
 {
@@ -17,7 +18,7 @@ class TransferController extends Controller
         return view("transfers.index", [
             "transfers" => Transfer::when($search_phrase, function($query, $search_phrase) {
                 return $query->search($search_phrase);
-            })->paginate(8)
+            })->with(["account"])->paginate(8)
         ]);
     }
 
@@ -119,5 +120,18 @@ class TransferController extends Controller
             "status",
             "Pomyślnie usunięto przelew"
         );
+    }
+
+    public function report(Request $request) {
+        $validation = \Validator::make($request->all(),[
+            "transfer_date" => "required|date"
+        ]);
+
+        if($validation->fails()) {
+            return response()->json("err");
+        }
+
+        $result = DB::select('CALL transfer_report("'.$request->transfer_date.'")');
+        return response()->json($result);
     }
 }

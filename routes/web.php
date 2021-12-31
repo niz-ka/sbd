@@ -22,9 +22,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Development only
 Route::get('/', function () {
-    return redirect()->route("others.account-types.index");
+    return redirect()->route("customers.index");
 });
 
 Route::name("others.")->group(function () {
@@ -36,6 +35,10 @@ Route::name("others.")->group(function () {
 
 Route::resource("customers", CustomerController::class);
 Route::resource("customer-requests", CustomerRequestController::class);
-Route::resource("accounts", AccountController::class);
 Route::resource("loans", LoanController::class);
+
+Route::post("accounts/report", [AccountController::class, "report"])->name("accounts.report");
+Route::resource("accounts", AccountController::class);
+
+Route::post("transfers/report", [TransferController::class, "report"])->name("transfers.report");
 Route::resource("transfers", TransferController::class);

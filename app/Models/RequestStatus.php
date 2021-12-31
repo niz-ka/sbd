@@ -15,6 +15,6 @@ class RequestStatus extends Model
     public function scopeSearch($query, $search)
     {
         return $query
-            ->where("name", "LIKE", "%{$search}%");
+            ->where("name", "LIKE", "{$search}%");
     }
 }

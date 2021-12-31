@@ -9,6 +9,16 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CustomerRequestFactory extends Factory
 {
+
+    private $dummyComments = [
+        "Załącznik do wniosku dostarczony w późniejszym terminie",
+        "Wniosek złożony ze względu na zmianę miejsca zamieszkania",
+        "Wniosek złożony ze względu na zmianę przepisów",
+        "Wniosek wymaga uzupełnienia. Brakuje PESELu",
+        "Wniosek przeznaczony do rozpatrzenia w Dziale Kredytowym",
+        "", "", ""
+    ];
+
     /**
      * Define the model's default state.
      *
@@ -18,10 +28,10 @@ class CustomerRequestFactory extends Factory
     {
         return [
             "request_date" => $this->faker->date(),
-            "comment" => $this->faker->optional(0.7)->text(250),
+            "comment" => $this->dummyComments[rand(0, count($this->dummyComments)-1)],
             "customer_id" => Customer::factory(),
-            "request_type_id" => RequestType::factory(),
-            "request_status_id" => RequestStatus::factory()
+            "request_type_id" => rand(1,4),
+            "request_status_id" => rand(1,4)
         ];
     }
 }

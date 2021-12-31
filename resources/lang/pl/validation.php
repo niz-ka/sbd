@@ -167,6 +167,7 @@ return [
         "receiver_number" => "rachunek odbiorcy",
         "title" => "tytuł przelewu",
         "receiver_data" => "dane odbiorcy",
-        "transfer_type" => "rodzaj przelewu"
+        "transfer_type" => "rodzaj przelewu",
+        "transfer_date" => "data przelewu"
     ]
 ];

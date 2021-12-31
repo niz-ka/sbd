@@ -15,9 +15,7 @@ class Customer extends Model
     public function scopeSearch($query, $search)
     {
         return $query
-            ->where("id", "LIKE", "%{$search}%")
-            ->orWhere("full_name", "LIKE", "%{$search}%")
-            ->orWhere("customer_kind", "LIKE", "%{$search}%");
+            ->where("full_name", "LIKE", "{$search}%");
     }
 
     public function address()
